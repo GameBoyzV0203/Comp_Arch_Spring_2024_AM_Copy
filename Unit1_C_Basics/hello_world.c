@@ -38,14 +38,15 @@ int main(int argc, char* argv[]) {
     *double_pointer = 102.45;
     printf("\n%lf", *double_pointer);
 
-    int* bad_pointer = (int*) 4;
-    printf("\n%d", *bad_pointer);
+    //int* bad_pointer = (int*) 4;
+    //printf("\n%d", *bad_pointer);
 
     char phrase[20];
 
     int* int_array = calloc(4, sizeof(int));
 
     *(int_array + 3) = 56;
+    printf("\n\n3rd element of array: %d\n", *(int_array + 3));
 
     return 0; // no errors
 }
