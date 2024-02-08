@@ -1,5 +1,5 @@
 ; Base Author: Megan Avery Spring 2024
-; Exercise Author: [YOUR NAME HERE]
+; Exercise Author: Andrew Vaughan
 
 ; Purpose - to learn the following:
 ; 	- logical shifts
@@ -21,8 +21,28 @@ asm_main:
         enter   0,0               ; setup routine
         pusha
 
-		; TODO: add code
+		; mov eax, 10
+                ; shl eax, 3
+                ; call print_int
+                ; call print_nl
 
+                ; mov eax, 080000045H
+                ; call print_int
+                ; call print_nl
+                ; shl eax, 1
+                ; call print_int
+
+                ; mov eax, 23
+                ; shr eax, 2 ; divide by 4
+                ; call print_int
+
+                ; mov ah, 0C3H
+                ; rol ah, 1
+
+                mov eax, 4
+                mov ebx, 2
+                test eax, ebx
+                dump_regs 1
         popa
         mov     eax, 0            ; return back to C
         leave                     
