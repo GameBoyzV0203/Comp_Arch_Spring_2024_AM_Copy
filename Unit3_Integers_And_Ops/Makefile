@@ -9,7 +9,7 @@ LDFLAGS := -m32
 CC		:= gcc
 CXX		:= g++
 CXXFLAGS := -m32
-TARGETS := bitwise_exercises bit_twiddling_exercises integers_exercises math skeleton shifts_exercises
+TARGETS := bitwise_exercises bit_twiddling_exercises integers_exercises math skeleton shifts_exercises project3
 DEP := driver.o asm_io.o
 
 .PHONY: clean
@@ -27,9 +27,13 @@ integers_exercises: $(DEP)
 
 math: $(DEP)
 
+project3: $(DEP)
+
 skeleton: $(DEP)
 
 shifts_exercises: $(DEP)
+
+
 
 asm_io.o: asm_io.asm
 	$(AS) $(ASFLAGS) -d ELF_TYPE asm_io.asm
@@ -41,6 +45,8 @@ bit_twiddling_exercises.o: asm_io.inc
 integers_exercises.o: asm_io.inc
 
 math.o: asm_io.inc
+
+project3.0: asm_io.inc
 
 skeleton.o: asm_io.inc
 
